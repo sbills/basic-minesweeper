@@ -13,10 +13,9 @@ public class CS225_Lab2
 
 	public static void main(String[] args)
 	{
-		// Your program should always output your name and the lab/problem
-		// number. DO NOT DELETE OR COMMENT OUT. Replace with relevant info.
+		
 		System.out.println("Sean Billideau");
-		System.out.println("Lab 2");
+		
 		System.out.println("");
 
 		// Definition of mine board. *** DO NOT CHANGE ***
@@ -42,7 +41,7 @@ public class CS225_Lab2
 		// the number of empty spots revealed is less than 20
 		while (currScore > 0 && numEmptySpotsFound < 20)
 		{
-			// TODO 4: Write code here to ask the user for a row and column to guess...
+			
 			System.out.println("-----------------------Next Turn-----------------------");
 			Scanner sc=new Scanner(System.in);
 			System.out.println("Please enter a column and row to guess");
@@ -63,16 +62,14 @@ public class CS225_Lab2
 			{
 				mineBoard[row][col]=MineCell.RM;
 				currScore-=4;
-				// TODO 5: Write code here to respond to the user
-				// guessing a cell that has hidden mine...
+				
 			}
 			else if (mineBoard[row][col] == MineCell.HE)
 			{
 				mineBoard[row][col] = MineCell.RE;
 				currScore += 1;
 				numEmptySpotsFound+=1;
-				// TODO 6: Write code here to respond to the user
-				// guessing a cell that has hidden empty cell...
+			
 			}
 			else
 			{
@@ -91,15 +88,6 @@ public class CS225_Lab2
 			printGameOverBoard(mineBoard);
 		}
 		 byte defualt;
-
-
-
-
-
-
-
-		
-
 
 	}
 
@@ -126,10 +114,6 @@ public class CS225_Lab2
 			}
 			System.out.println();
 		}
-
-
-		// TODO 1: Write code to print the current game state as specified
-		// in the comment above
 	}
 
 	/////////////////////////////////////////////////////////////////////
@@ -155,7 +139,6 @@ public class CS225_Lab2
 					System.out.print(" M ");
 				else if (board[row][col]== MineCell.RE)	
 					System.out.print(" E ");
-
 
 			}
 			System.out.println();
